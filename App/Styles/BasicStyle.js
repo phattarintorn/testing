@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         borderColor: '#015744',
         borderWidth: 1
     },
-    
+
     btnallWhite: {
         backgroundColor: '#fff',
         padding: 15,
@@ -102,6 +102,40 @@ const styles = StyleSheet.create({
         borderRadius: 90,
         margin: 5
     },
+    modalShow: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#00000092',
+        padding: 20,
+    },
+    font18Bold: {
+        fontSize: 18,
+        fontWeight: 'bold'
+    },
+    font14: {
+        fontSize: 14
+    },
+    fontBlue: {
+        color: '#1e86fd',
+        fontSize: 18,
+        fontWeight: '500',
+        marginBottom: 5
+    },
+    borderStyle: {
+        borderBottomColor: '#e5e5e5',
+        borderBottomWidth: 1,
+        marginTop: 10
+    },
+    picStyle: {
+        width: 80,
+        height: 80,
+        position: 'relative',
+        resizeMode: 'contain',
+        marginTop: 25,
+        marginBottom: 20,
+
+    }
 });
 
 export default styles;

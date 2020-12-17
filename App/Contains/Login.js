@@ -8,12 +8,14 @@ import {
     TouchableOpacity,
 } from 'react-native'
 import { Container, Header, Left, Body, Right, Title, Content, Footer, FooterTab } from 'native-base';
+import CheckBox from '@react-native-community/checkbox';
 import styles from '../Styles/BasicStyle'
 
 export default class Login extends React.Component {
 
     state = {
         // isLogin: false,
+        checked: false
     }
 
     componentDidMount() {
@@ -45,7 +47,7 @@ export default class Login extends React.Component {
                             placeholderTextColor="#939598"
                             keyboardType="default"
                             secureTextEntry={true}
-                            underlineColorAndroid="#939598"
+                            underlineColorAndroid="#e5e5e5"
                             autoCapitalize="none"
                         // value={this.state.password}
                         // onChangeText={(password) =>
@@ -55,12 +57,17 @@ export default class Login extends React.Component {
 
                     </View>
 
-                    <View style={{  }}>
-                        <View style={{ alignSelf: 'flex-start' }}>
-                            <Text>บันทึกการเข้าสู่ระบบ</Text>
-                        </View>
-                        <View style={{ alignSelf: 'flex-end' }}>
-                            <Text>ลืมรหัสผ่าน?</Text>
+                    <View style={{ flexDirection: 'row', flex: 1, marginRight: 10, }}>
+                        <CheckBox
+                            // disabled={false}
+                            value={this.state.checked}
+                            onValueChange={() => this.setState({ checked: !this.state.checked })}
+                        />
+                        <Text style={{ marginRight: 10, marginTop: 5, fontSize: 14, color: '#939598', }}>
+                            บันทึกการเข้าสู่ระบบ
+                        </Text>
+                        <View style={{ flex: 1 }}>
+                            <Text style={{ textAlign: 'right', fontSize: 14, marginTop: 5, color: '#939598' }}>ลืมรหัสผ่าน?</Text>
                         </View>
                     </View>
                     <View style={{ marginTop: 30 }}>
@@ -85,7 +92,7 @@ export default class Login extends React.Component {
                                     marginTop: 10,
                                 }}
                             />
-                            <Text style={{ marginLeft: 10, marginRight: 10, color: '#C3C3C3' }}>
+                            <Text style={{ marginLeft: 10, marginRight: 10, color: '#939598' }}>
                                 ไม่มีบัญชีผู้ใช้
                             </Text>
                             <View

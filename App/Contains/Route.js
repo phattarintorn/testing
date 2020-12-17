@@ -10,6 +10,7 @@ import VerifyScreen from './Verify'
 import PincodeScreen from './Pincode'
 import PincodeVerifyScreen from './PincodeVerify'
 import TouchIDScreen from './TouchID'
+import TouchPinScreen from './TouchPin'
 
 const MainNavigator = createStackNavigator({
   Splash: { screen: SplashScreen },
@@ -20,7 +21,8 @@ const MainNavigator = createStackNavigator({
   Verify: { screen: VerifyScreen },
   Pincode: { screen: PincodeScreen },
   PincodeVerify: { screen: PincodeVerifyScreen },
-  TouchID: { screen: TouchIDScreen }
+  TouchID: { screen: TouchIDScreen },
+  TouchPin: { screen: TouchPinScreen }
 },
   {
     initialRouteName: 'Splash',

@@ -55,7 +55,7 @@ export default class TouchID extends React.Component {
                         <TouchableOpacity style={styles.btnGreen}>
                             <Text style={styles.fontWhite}>ตั้งค่าลายนิ้วมือ</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.btnallWhite} onPress={() => this.props.navigation.navigate('Verify')}>
+                        <TouchableOpacity style={styles.btnallWhite} onPress={() => this.props.navigation.navigate('TouchPin')}>
                             <Text style={styles.fontGreen}>ข้าม</Text>
                         </TouchableOpacity>
                     </View>
